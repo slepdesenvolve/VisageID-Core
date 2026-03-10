@@ -1,3 +1,11 @@
+"""
+@license MIT
+@author Ricardo Nogueira (https://github.com/slepdesenvolve)
+@description Core Engine de Autenticação Biométrica - VisageID.
+Este módulo utiliza OpenCV e Face_Recognition (ResNet) para processamento 
+de landmarks faciais e validação de identidade em tempo real.
+"""
+
 # Importa o módulo Flask e funções relacionadas para criar a aplicação web
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 
@@ -236,4 +244,5 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     # Inicia o servidor Flask em modo de depuração
+
     app.run(debug=True)
